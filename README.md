@@ -1,46 +1,56 @@
-# MIS Club Secure Software Development Workshop Series
+# Your Portfolio Starter
 
-A browser-based teaching workspace for Workshop 1 — Git & GitHub — plus a modern Astro portfolio demonstration for MIS Club students.
+A custom workshop starter for building a professional portfolio with Astro, Git, GitHub, VS Code, and Copilot.
 
-## Use the site
+## 1. Make it yours
 
-- **Student workshop:** [Timed agenda, progress checklist, catch-up paths, and Copilot prompts](https://skyeshanohan.github.io/workshopsite/workshop/)
-- **Presenter desk:** [Run of show, checklist, timer, prompt bank, and troubleshooting](https://skyeshanohan.github.io/workshopsite/presenter/)
-- **Interactive presentation:** [12-slide deck with keyboard navigation and speaker notes](https://skyeshanohan.github.io/workshopsite/slides/)
-- **Portfolio designs:** [Editorial, Developer, and Professional previews](https://skyeshanohan.github.io/workshopsite/designs/)
-- **Quick references:** [Git, GitHub, VS Code, Copilot, Actions, and Astro docs](https://skyeshanohan.github.io/workshopsite/resources/)
+Open `src/data/profile.js`. Change your name, role, introduction, skills, education, experience, project examples, links, and contact email.
 
-The Pages URL will become available after the first successful deployment. If it does not load yet, check the Actions tab and repository Pages settings.
+Choose a visual style by changing `theme` to one of these values:
 
-## Local development
+- `editorial` — warm, expressive, story-led
+- `developer` — dark, technical, projects-first
+- `professional` — structured and recruiter-friendly
 
-Requirements: Node.js 20.3+ (Node 22 is configured for CI), Git, and VS Code.
+The starter contains fictional example data. Replace it with accurate details about your own work. You do not need to include private information.
+
+## 2. Preview locally
+
+Requirements: Node.js 22, Git, and VS Code.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Validate before pushing:
+Open the local address printed in the terminal, usually `http://localhost:4321`. Keep the terminal running while you preview.
+
+## 3. Connect to your own GitHub repository
+
+Create an empty repository on GitHub, then run these commands in the VS Code terminal from this folder. Replace the uppercase placeholders with your GitHub username and repository name.
 
 ```bash
-npm run build
-npm run preview
+git init
+git add .
+git commit -m "Create my portfolio"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git push -u origin main
 ```
 
-## GitHub Pages
+## 4. Publish the site
 
-The workflow at `.github/workflows/deploy.yml` builds the static Astro site and publishes the `dist/` folder to GitHub Pages. It derives the repository base path from `GITHUB_REPOSITORY`, so it supports project Pages paths without hard-coded asset links.
+1. In the repository, open **Settings → Pages**.
+2. Set the source to **GitHub Actions**.
+3. Open the **Actions** tab and watch **Build and deploy portfolio**.
+4. After the run succeeds, open the published URL and test the links.
 
-Check **Settings → Pages → Build and deployment → Source: GitHub Actions**. The organization must permit Pages for this repository. Because this repository is currently private, verify whether your organization plan and policy allow the intended audience to access a publicly reachable Pages site; otherwise make the repository public if appropriate.
+Astro configures the repository path automatically during the GitHub Actions build.
 
-## Workshop progression
+## Before you share
 
-1. **Git & GitHub:** repository, branches, commits, issues, pull requests, review, and deployment.
-2. **Testing and CI/CD:** automated quality checks, Actions, pull-request checks, and deployment.
-3. **Secure development:** static analysis, dependency risk, secret detection, and security review.
-4. **Spec-driven AI development:** requirement, specification, implementation, testing, security review, and deployment.
-
-## Student privacy and AI use
-
-The portfolio content is fictional example data. Students should publish only professional information they are comfortable making public. Never paste passwords, API tokens, private keys, or confidential information into prompts or source files. Copilot-generated changes require human review.
+- Check the page on desktop and mobile.
+- Use links that belong to you and point to the intended project.
+- Do not publish passwords, API tokens, private keys, home addresses, or other information you want to keep private.
+- Review AI-generated code before committing it.
+- Describe your contribution honestly, including when a project was completed as part of a team.
