@@ -2,7 +2,7 @@ name: Build and deploy portfolio
 
 on:
   push:
-    branches: [main, portfolio-starter]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -27,6 +27,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: build

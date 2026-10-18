@@ -8,5 +8,5 @@ export default defineConfig({
   output: 'static',
   site: owner ? `https://${owner}.github.io` : 'http://localhost:4321',
   base: repo && !isOrganizationSite ? `/${repo}` : '/',
-  trailingSlash: 'always'
+  trailingSlash: 'always',
 });
