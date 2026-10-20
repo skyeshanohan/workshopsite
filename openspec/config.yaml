@@ -1,0 +1,40 @@
+schema: spec-driven
+
+context: |
+  Project: MIS / GitHub portfolio workshop (Astro static site + theme ZIP starters).
+  Students download a theme ZIP, personalize src/data/profile.js, open a pull request, and publish with GitHub Pages.
+  Primary editable surface for students is profile.js. Theme layouts live in starters/portfolio/src/layouts/themes/.
+  Theme ZIPs are packaged from starters/portfolio/ by scripts/package-starters.mjs during npm run build.
+  Workshop is ~3 hours and may be self-paced; early finishers need optional stretch content without blocking beginners.
+  Reference prototype (enriched sections): https://github.com/tyler-beach/example-my-resume-site
+  Live prototype: https://tyler-beach.github.io/example-my-resume-site/
+
+rules:
+  proposal:
+    - Define outcome, scope, non-goals, acceptance criteria, risks, rollback, and choices needing human approval.
+    - Keep changes bounded to the portfolio starter and student/facilitator docs.
+  specs:
+    - Describe observable behavior, not implementation preference unless needed to guarantee behavior.
+    - Every requirement must have observable Given/When/Then scenarios.
+    - Call out beginner-safe defaults (empty optional lists hide sections).
+  design:
+    - Prefer profile.js data changes over new packages or multi-page routing.
+    - Preserve the three existing themes and GitHub Pages deploy path.
+    - Document migration from single education object to education array.
+  tasks:
+    - Break work into independently verifiable checkbox tasks.
+    - Include starter packaging, student-guide stretch steps, and a smoke build.
+    - Do not mark checks complete unless they actually ran.
+
+operations:
+  apply:
+    guidance:
+      - Inspect starters/portfolio and student-guide before editing.
+      - Keep optional sections hidden when their arrays are empty.
+      - Rebuild theme ZIPs via the existing package-starters path.
+      - Update student guide and facilitator notes for stretch tasks.
+  archive:
+    guidance:
+      - Verify acceptance scenarios against a local build of each theme.
+      - Confirm packaged ZIPs include the enriched profile.js shape.
+      - Record any intentional deviations from the Tyler Beach prototype.
