@@ -44,16 +44,16 @@ The starter MUST allow `interests` and `learning` string arrays. Themes MUST sho
 - **THEN** a “currently learning” (or equivalent) grouping includes those items
 
 ### Requirement: Data-driven hero badge
-Themes that show a status badge MUST read it from `profile.badge` when present. When `badge` is empty or omitted, Developer MUST not show a misleading hardcoded internship badge; Editorial MAY keep a generic eyebrow fallback.
+Themes that show a status badge MUST read it from `profile.badge` when present. When `badge` is empty or omitted, themes MUST not show a misleading hardcoded internship badge.
 
 #### Scenario: Custom badge text
 - **GIVEN** `badge` is set to a non-empty string
-- **WHEN** the Developer theme renders
-- **THEN** that string appears as the hero badge
+- **WHEN** Student, Emerging, or Professional renders a badge area
+- **THEN** that string appears as the status badge
 
 #### Scenario: No badge configured
 - **GIVEN** `badge` is `''` or omitted
-- **WHEN** the Developer theme renders
+- **WHEN** Student, Emerging, or Professional renders
 - **THEN** the internship/status badge element is not shown
 
 ### Requirement: Preserve core resume sections and deployability

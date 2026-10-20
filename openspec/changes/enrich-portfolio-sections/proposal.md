@@ -13,7 +13,7 @@ Give workshop portfolio starters the sections a real one-page resume site usuall
   - `honors` as an array of `{ title, detail? }`
   - `interests` as a string array
   - `learning` as a string array (stretch)
-- Update **Editorial**, **Developer**, and **Professional** themes to render the new fields.
+- Update **Student**, **Emerging**, and **Professional** themes to render the new fields.
 - Hide credentials, interests, and learning sections when their lists are empty; hide hero badge when `badge` is empty/absent.
 - Accept legacy single `education` object by normalizing to a one-item list in layouts (compat during migration).
 - Ship sample student-friendly stretch content in the starter `profile.js` (campus clubs, certifications-in-progress, hobbies)—not Tyler’s production resume content.
@@ -41,7 +41,7 @@ Give workshop portfolio starters the sections a real one-page resume site usuall
 ## Risks and rollback
 
 - **Breaking change:** `education` object → array. Mitigate with layout normalization for a single object during one release; document the array form as the only sample in `profile.js`.
-- Extra nav links can crowd the Developer header on small screens—wrap nav (already present) and only show optional anchors when sections exist.
+- Extra nav links can crowd compact headers on small screens—wrap nav when present and only show optional anchors when sections exist.
 - Stretch content can distract beginners—keep stretch clearly labeled “optional / if you finish early” in the guide.
 
 Rollback: revert the change branch; prior ZIPs remain in git history. Prototype remains on `tyler-beach/example-my-resume-site` for reference.

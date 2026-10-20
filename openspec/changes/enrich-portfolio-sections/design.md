@@ -36,8 +36,8 @@ Starter sample ships only the array form. Guide copy tells students to copy/past
 
 | Theme | Education | Credentials | Interests / learning | Badge |
 |---|---|---|---|---|
-| Developer | Dedicated timeline section after experience | Card grid; nav link only if shown | Tag rows; nav link only if shown | Hero badge from `profile.badge` |
-| Editorial | Listed under about column | Extra band before projects | Tag band before projects | Replaces default eyebrow when set |
+| Student | Card in education column; coursework/activities lead | List under education when set | Interests & learning block when set | Optional hero badge from `profile.badge` |
+| Emerging | Label-column education section | Credentials list when set | “More” section when set | Optional hero badge from `profile.badge` |
 | Professional | Sidebar list (multi) | Main column section | Main column chips | Sidebar chip when set |
 
 No new pages, components packages, or CSS frameworks.
@@ -45,8 +45,8 @@ No new pages, components packages, or CSS frameworks.
 ## Student pacing
 
 ```
-Core (everyone):   name/contact → skills → education[0] → 1–2 experience → 1–2 projects → photo → PR → Pages
-Stretch (early):   more projects → more experience → certifications/honors → interests → learning → polish badge text
+Core (everyone):   name/contact → skills → education → stage content (Student: coursework/activities; Emerging/Professional: experience) → 1–2 projects → photo → PR → Pages
+Stretch (early):   more projects → more experience/coursework → certifications/honors → interests → learning → polish badge text
 ```
 
 Stretch tasks are optional checkboxes in the student guide, not blockers for Step 5/6.
@@ -60,6 +60,6 @@ Stretch tasks are optional checkboxes in the student guide, not blockers for Ste
 ## Implementation notes when applying
 
 - Mirror prototype behavior from `tyler-beach/example-my-resume-site` themes, not Tyler’s Pathfinder colors or personal resume facts.
-- Keep Developer default badge sample as something like `Open to internships` for the Jordan Lee persona.
+- Keep Student/Emerging default badge samples internship-oriented for the Jordan Lee persona (e.g. `Looking for internships`).
 - After starter edits, run workshop `npm run build` so `public/downloads/*.zip` update.
 - Update Copilot prompts in the guide to mention optional arrays without requiring them.

@@ -4,8 +4,8 @@
 
 ## Apply to workshop starters (do after prototype approval)
 - [ ] 2.1 Update `starters/portfolio/src/data/profile.js` with `badge`, education array, certifications, honors, interests, learning + student-safe sample stretch content and comments
-- [ ] 2.2 Update Developer, Editorial, and Professional themes to render new fields; hide empty optional sections; normalize legacy education object
-- [ ] 2.3 Move Developer hero badge to `profile.badge` (default sample: internship-oriented for Jordan Lee persona)
+- [ ] 2.2 Update Student, Emerging, and Professional themes to render new fields; hide empty optional sections; normalize legacy education object
+- [ ] 2.3 Keep hero/status badge driven by `profile.badge` (default sample: internship-oriented for Jordan Lee persona on Student/Emerging)
 - [ ] 2.4 Rebuild theme ZIPs (`npm run build` / package-starters) and verify ZIP `profile.js` contains the new fields
 
 ## Docs and facilitation
